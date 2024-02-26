@@ -93,12 +93,6 @@ router.route('/testcollection')
         res.json(o);
     }
     );
-    
-require('dotenv').config();
-const jwtOptions = {
-    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey: process.env.SECRET
-};
 
 app.use('/', router);
 app.listen(process.env.PORT || 8080);
